@@ -79,10 +79,13 @@ one embedding layer,
 
 one LSTM layer with 128 neurons and one output layer with 6 neurons since we have 6 labels in the output.
 
-<img src = '
 
 Early Stopping: This callback ensures that we avoid overfitting by stopping training when the training and validation loss diverge.
 
 # LOSS AND OPTIMIZER
 
 model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['acc'])
+
+# GRAPHS FOR LOSS AND ACCURACY
+
+https://app.wandb.ai/pratikraut_/NLPProject?workspace=user-pratikraut_

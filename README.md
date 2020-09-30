@@ -61,5 +61,9 @@ In simple terms, Hamming loss calculates the incorrectly classified labels, it u
 
 Whereas, Accuracy score calculates the correctly classified labels.
 
+#### APP SCREENSHOT
+
+<img src='Images/Streamlitapp.png'>
+
 I took LSTM approach, the notebook is available in the notebook folder and the additional work is here :
 https://wandb.ai/pratikraut_/NLPProject?workspace=user-pratikraut_

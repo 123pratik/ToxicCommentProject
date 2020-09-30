@@ -48,7 +48,14 @@ What is Classifier Chain ?
 
 Classifier chains are akin to binary relevance, however the target variables (y1, y2,.., yn) are not fully independent. The features (x1, x2,.., xm) are initially used to predict y1. Next (x1, x2,.., xm, y1) is used to predict y2. At the nth step, (x1, x2,.., xm, y1,.., yn−1) predicts yn. The ordering in which the labels are predicted can be determined by the user and can greatly influence the results.
 
+#### LOSS
+Hamming loss ?
 
+In simple terms, Hamming loss calculates the incorrectly classified labels, it uses XOR bettween the actual and predicted labels. 
+
+Whereas, Accuracy score calculates the correctly classified labels.
+
+# THE OTHER NOTEBOOK IN WHICH I TOOK LSTM APPROACH.
 # TOKENIZER - Breaking your pieces of text into individual words.
 
 Ref : https://machinelearningmastery.com/prepare-text-data-deep-learning-keras/

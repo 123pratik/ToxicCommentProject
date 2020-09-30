@@ -9,8 +9,12 @@ The types of toxicity are:
 
 <strong>toxic, severe toxic, obscene, threat, insult, identity hate.</strong>
 
+# PROBLEM 
+It is a multi-label classification problem, in this context it means that the text belongs to one or more labels.
+Ex : A text could belong to toxic and insult labels.
+
 # IMPLEMENTATION 
-In this repository, I'm classifying the labels using LSTM technique with the help of tensorflow framework.
+In this repository, I'm classifying the labels using Scikit-Multilearn library
 
 1] Data pre-processing :
 
@@ -24,6 +28,26 @@ inflections: adding a suffix to a word, that doesn't change its grammatical cate
 
 derivations - adding a suffix to a word, that changes its grammatical category, such as nation (noun) => national (adjective) => nationalize (verb).
 </p>
+
+<strong> VECTORIZER </strong>
+Used TF-IDf and CountVectorizer
+
+<strong> Scikit-Multilearn </strong>
+#### Binary Relevance
+What is Binary Relevance ?
+
+<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftonnykwon.github.io%2Fblog%2Fmachine%2F2020-01-16-Multi-Label%2520Classification%2F&psig=AOvVaw31TfZBexmmQWhjSQ5MoWl1&ust=1601531066878000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMifwq2WkOwCFQAAAAAdAAAAABAX'>
+
+the data is split up into L data sets, where L is the number of labels. Each subset has a column where either a 0 or a 1 is assigned to an instance, indicating the presence or absence of that label on that instance. A separate classifier is trained on each data set.
+I used GaussianNB and Logistic Regression as a separate classifier to train on each dataset.
+
+#### Classifier Chain
+What is Classifier Chain ?
+
+<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fxang1234.github.io%2Fmulti-label%2F&psig=AOvVaw1ShZTIXrUuSwyifcW5i8LW&ust=1601533102199000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMill_mdkOwCFQAAAAAdAAAAABAD'>
+
+Classifier chains are akin to binary relevance, however the target variables (y1, y2,.., yn) are not fully independent. The features (x1, x2,.., xm) are initially used to predict y1. Next (x1, x2,.., xm, y1) is used to predict y2. At the nth step, (x1, x2,.., xm, y1,.., yn−1) predicts yn. The ordering in which the labels are predicted can be determined by the user and can greatly influence the results.
+
 
 # TOKENIZER - Breaking your pieces of text into individual words.
 
